@@ -1,0 +1,15 @@
+方法1：
+1.安装node
+2.npm install -g node-inspector  有必要的话重新定或者用淘宝的cnpm
+3.node-inspector （node-inspector启动后会生成一个服务，主要负责调试工具与nodejs程序之间的沟通工作，一个桥梁），会获取对应浏览器调试地址
+4.node --debug app.js  （app.js为对应文件）
+5.在对应的后台页面的js里面添加debug，在浏览器里面请求这个页面，这样就能在http://127.0.0.1:8080/?port=5858页面里面捕捉到对应的端点了（先关闭static和node这个两个仓库的node启动项）
+
+
+方法2：（如何调试webpack的webpack.config.js这个文件）
+1.在node命令行对话框打 set NODE_ENV=production&&node --inspect --debug-brk webpack.config.js（set NODE_ENV=production这个是设置执行环境，可以引用process，然后在process.env.NODE_ENV中获取到production这个环境值）
+2.浏览器进入chrome://inspect/#devices，最下面会看到inspect，点击就出来了对应的调试界面（如果没出来就点击 open dedicated DevTools for node）
+
+
+
+如何调试knockout，react， kids的打包文件在哪

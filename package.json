@@ -1,0 +1,30 @@
+{
+  "name": "jeffrey-koa-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev-win": "set NODE_ENV=dev&&nodemon app.js",
+    "qa-win": "set NODE_ENV=qa&&nodemon app.js",
+    "production": "node app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.0.0",
+    "koa-bodyparser": "^2.2.0",
+    "koa-compress": "^1.0.9",
+    "koa-etag": "^2.1.1",
+    "koa-conditional-get": "^1.0.3",
+    "koa-helmet": "^2.0.0",
+    "koa-router": "^5.4.0",
+    "koa2-cors": "^2.8.1",
+    "koa2-proxy": "^1.1.7"
+  },
+  "devDependencies": {
+    "koa-convert": "http://registry.npm.taobao.org/koa-convert/download/koa-convert-1.2.0.tgz",
+    "nodemon": "^1.9.2",
+    "co-views": "^2.1.0",
+    "nunjucks": "^2.4.2",
+    "node-uuid": "^1.4.7",
+  }
+}
